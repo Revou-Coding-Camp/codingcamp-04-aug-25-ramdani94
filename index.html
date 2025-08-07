@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Ramdani</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Title -->
+        <div class="header-container">
+            <h1 class="main-title"><center>Todo List Ramdani</center></h1>
+            <br>
+        </div>
+
+        <!-- Form Todo -->
+        <form class="form-inline">
+            <label for="todo-input" class="label sr-only">Add a new task</label>
+            <input type="text" id="todo-input" class="input input-inline" placeholder="Enter your task here">
+
+            <label for="date-input" class="label sr-only">Date</label>
+            <input type="date" id="date-input" class="input input-inline">
+
+            <button type="button" class="btn btn-green btn-inline" onclick="addTask();">+</button>
+        </form>
+        <br>
+        <!-- List Todo -->
+        <section>
+            <div class="action-container">
+                <button type="button" class="btn btn-gray"
+                onclick="toggleFilter();">Filter</button>
+                <button type="button" class="btn btn-yellow"
+                id="cancel-filter-btn"
+                onclick="cancelFilter();" style="display:none;">Batal Filter</button>
+                <button type="button" class="btn btn-red"
+                onclick="removeAllTask();">Delete All</button>
+            </div>
+            
+            <header>
+                <h2 class="section-title">Task List</h2>
+            </header>
+
+            <div id="todo-list">
+                <p>No tasks available</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Javascript External -->
+    <script src="js/script.js"></script>
+</body>
+</html>
